@@ -7,18 +7,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/product_name"
         android:textColor="#ffffff"
-        android:text="Pear"/>
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/product_thumbnail"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        />
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:layout_width="56dp"
-        android:layout_height="11dp"
-        android:id="@+id/product_rating"/>
+        android:layout_marginBottom="10dp"
+        android:id="@+id/detail_item_left_tv"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:autoLink="web"
+        android:id="@+id/detail_item_right_tv"/>
     <!--<View-->
         <!--android:layout_width="match_parent"-->
         <!--android:background="#000000"-->

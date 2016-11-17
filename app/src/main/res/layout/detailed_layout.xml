@@ -3,76 +3,22 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:background="@color/background"
     android:layout_height="match_parent">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/app_id_tv"/>
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:layout_width="56dp"
-        android:layout_height="11dp"
-        android:id="@+id/detail_rating_image"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bid_rate"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/call_to_action"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/campaign_display_order"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/campaign_id"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/campaign_type_id"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/category_name"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/click_proxy_url"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/creative_id"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/homeScreen"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/impressionTrackingURL"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/isRandomPick"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/minOSVersion"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/numberOfRatings"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/productDescription"/>
     <com.facebook.drawee.view.SimpleDraweeView
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:id="@+id/productThumbnail"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="56dp"
+        android:layout_height="11dp"
+        android:id="@+id/detail_rating_image"
+        android:layout_marginBottom="20dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detail_recycler">
+    </android.support.v7.widget.RecyclerView>
+
+
 
 
 

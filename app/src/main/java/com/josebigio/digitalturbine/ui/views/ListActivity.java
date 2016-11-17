@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -42,7 +43,11 @@ public class ListActivity extends AppCompatActivity implements ListView {
     @Override
     public void draw(List<DetailModel> data) {
         ListAdapter listAdapter = new ListAdapter(data);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
+                linearLayoutManager.getOrientation());
+        recyclerView.addItemDecoration(dividerItemDecoration);
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(listAdapter);
         listAdapter.notifyDataSetChanged();
     }

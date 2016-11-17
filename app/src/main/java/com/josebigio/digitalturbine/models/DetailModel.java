@@ -1,10 +1,14 @@
 package com.josebigio.digitalturbine.models;
 
 
+import android.util.Pair;
+
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <h1>DetailModel</h1>
@@ -131,5 +135,29 @@ public class DetailModel implements Serializable {
 
     public String getProductThumbnail() {
         return productThumbnail;
+    }
+
+    public List<Pair<String,String>> getAllStringValues() {
+        List<Pair<String,String>> result = new ArrayList<>();
+        result.add(new Pair<>("appId",appId));
+        result.add(new Pair<>("campaignId",campaignId));
+        result.add(new Pair<>("campaignTypeId",campaignTypeId));
+        result.add(new Pair<>("productDescription",productDescription));
+        result.add(new Pair<>("productId",productId));
+        result.add(new Pair<>("isRandomPick",isRandomPick));
+        result.add(new Pair<>("callToAction",callToAction));
+        result.add(new Pair<>("categoryName",categoryName));
+        result.add(new Pair<>("bidRate",bidRate));
+        result.add(new Pair<>("creativeId",creativeId));
+        result.add(new Pair<>("campaignDisplayOrder",campaignDisplayOrder));
+        result.add(new Pair<>("averageRatingImageURL",averageRatingImageURL));
+        result.add(new Pair<>("bidRate",bidRate));
+        result.add(new Pair<>("creativeId",creativeId));
+        result.add(new Pair<>("campaignDisplayOrder",campaignDisplayOrder));
+        result.add(new Pair<>("clickProxyURL",clickProxyURL));
+        result.add(new Pair<>("impressionTrackingURL",impressionTrackingURL));
+        result.add(new Pair<>("homeScreen",homeScreen));
+        result.add(new Pair<>("numberOfRatings",numberOfRatings));
+        return result;
     }
 }
