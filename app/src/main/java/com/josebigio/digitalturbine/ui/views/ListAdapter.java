@@ -30,7 +30,7 @@ public class ListAdapter extends RecyclerView.Adapter<Product> {
     public void onBindViewHolder(Product holder, int position) {
         DetailModel detailModel = dataSource.get(position);
         holder.productName.setText(detailModel.getProductName());
-//        holder.productName.setText(detailModel.getProductName());
+        holder.thumbnail.setImageURI(detailModel.getProductThumbnail());
         holder.rating.setText(detailModel.getRating());
     }
 
