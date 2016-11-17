@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 
 import com.josebigio.digitalturbine.R;
 import com.josebigio.digitalturbine.models.DetailModel;
+import com.josebigio.digitalturbine.ui.presenters.ListPresenter;
 
 import java.util.List;
 
@@ -32,6 +33,9 @@ public class ListAdapter extends RecyclerView.Adapter<Product> {
         holder.productName.setText(detailModel.getProductName());
         holder.thumbnail.setImageURI(detailModel.getProductThumbnail());
         holder.rating.setImageURI(detailModel.getAverageRatingImageURL());
+        holder.thumbnail.setOnClickListener(view -> {
+            ListPresenter.get().onItemClicked(detailModel);
+        });
     }
 
     @Override

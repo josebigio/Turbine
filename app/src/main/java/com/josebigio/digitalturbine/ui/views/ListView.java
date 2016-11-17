@@ -11,4 +11,5 @@ public interface ListView {
 
     void draw(List<DetailModel> data);
     void showLoading(boolean show);
+    void startDetailedView(DetailModel detailModel);
 }

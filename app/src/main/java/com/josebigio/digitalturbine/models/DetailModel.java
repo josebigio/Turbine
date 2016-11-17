@@ -4,11 +4,13 @@ package com.josebigio.digitalturbine.models;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
+import java.io.Serializable;
+
 /**
  * <h1>DetailModel</h1>
  */
 @Root(name = "ad",strict = false)
-public class DetailModel {
+public class DetailModel implements Serializable {
     @Element(name = "appId")
     String appId;
     @Element(name = "campaignId")

@@ -1,5 +1,6 @@
 package com.josebigio.digitalturbine.providers;
 
+import com.jakewharton.rxrelay.BehaviorRelay;
 import com.josebigio.digitalturbine.models.ListModel;
 import com.josebigio.digitalturbine.network.ApiService;
 
@@ -19,6 +20,8 @@ import rx.Observable;
 public class ProductProvider {
 
     private static ProductProvider instance;
+    BehaviorRelay<ListModel> relay = BehaviorRelay.create();
+
 
     private ProductProvider(){}
 
@@ -29,7 +32,11 @@ public class ProductProvider {
         return instance;
     }
 
+
    public Observable<ListModel> getProductList() {
+       if(relay.hasValue()) {
+           return relay;
+       }
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
@@ -55,7 +62,10 @@ public class ProductProvider {
         parameters.put("sessionId","techtestsession");
         parameters.put("totalCampaignsRequested","10");
 
-        return adapter.create(ApiService.class).getProductList(parameters);
+        return adapter.create(ApiService.class).getProductList(parameters)
+                .doOnNext(listModel -> {
+                    relay.call(listModel);
+                });
     }
 
 

@@ -35,6 +35,8 @@ public class ListPresenter implements IListPresenter {
 
     @Override
     public void onItemClicked(DetailModel detailModel) {
+        Log.d(TAG,"on item clicked: " + detailModel);
+        listView.startDetailedView(detailModel);
 
     }
 
