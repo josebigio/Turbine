@@ -31,7 +31,7 @@ public class ListAdapter extends RecyclerView.Adapter<Product> {
         DetailModel detailModel = dataSource.get(position);
         holder.productName.setText(detailModel.getProductName());
         holder.thumbnail.setImageURI(detailModel.getProductThumbnail());
-        holder.rating.setText(detailModel.getRating());
+        holder.rating.setImageURI(detailModel.getAverageRatingImageURL());
     }
 
     @Override
