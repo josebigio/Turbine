@@ -41,8 +41,6 @@ public class DetailModel implements Serializable {
     String averageRatingImageURL;
     @Element(name = "clickProxyURL")
     String clickProxyURL;
-//    @Element(name = "minOSVersion")
-//    String minOSVersion;
     @Element(name = "rating")
     String rating;
     @Element(name = "productName")
@@ -108,10 +106,6 @@ public class DetailModel implements Serializable {
     public String getClickProxyURL() {
         return clickProxyURL;
     }
-
-//    public String getMinOSVersion() {
-//        return minOSVersion;
-//    }
 
     public String getRating() {
         return rating;

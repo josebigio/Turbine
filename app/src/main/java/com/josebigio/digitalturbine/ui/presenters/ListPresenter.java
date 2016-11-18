@@ -1,6 +1,7 @@
 package com.josebigio.digitalturbine.ui.presenters;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import com.josebigio.digitalturbine.models.DetailModel;
 import com.josebigio.digitalturbine.providers.ProductProvider;
@@ -54,6 +55,8 @@ public class ListPresenter implements IListPresenter {
                         ,error->{
                             Log.d(TAG,error.toString());
                             listView.showLoading(false);
+                            Toast.makeText(listView.getContext(),"Sorry, something wen't wrong"
+                                    ,Toast.LENGTH_LONG);
                         });
     }
 

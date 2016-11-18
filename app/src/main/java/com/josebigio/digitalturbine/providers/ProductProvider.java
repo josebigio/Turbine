@@ -32,8 +32,11 @@ public class ProductProvider {
         return instance;
     }
 
+    public Observable<ListModel> getProductList() {
+        return getProductList(10);
+    }
 
-   public Observable<ListModel> getProductList() {
+   public Observable<ListModel> getProductList(int count) {
        if(relay.hasValue()) {
            return relay;
        }
@@ -60,9 +63,11 @@ public class ProductProvider {
         parameters.put("siteId","4288");
         parameters.put("deviceId","4230");
         parameters.put("sessionId","techtestsession");
-        parameters.put("totalCampaignsRequested","10");
+        parameters.put("totalCampaignsRequested",String.valueOf(count));
+        parameters.put("lname","Bigio");
 
-        return adapter.create(ApiService.class).getProductList(parameters)
+
+       return adapter.create(ApiService.class).getProductList(parameters)
                 .doOnNext(listModel -> {
                     relay.call(listModel);
                 });

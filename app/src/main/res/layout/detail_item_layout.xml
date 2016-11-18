@@ -16,9 +16,4 @@
         android:textColor="#ffffff"
         android:autoLink="web"
         android:id="@+id/detail_item_right_tv"/>
-    <!--<View-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:background="#000000"-->
-        <!--android:layout_height="1dp"/>-->
-
 </LinearLayout>

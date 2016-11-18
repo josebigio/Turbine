@@ -1,5 +1,7 @@
 package com.josebigio.digitalturbine.ui.views;
 
+import android.content.Context;
+
 import com.josebigio.digitalturbine.models.DetailModel;
 
 import java.util.List;
@@ -12,4 +14,5 @@ public interface ListView {
     void draw(List<DetailModel> data);
     void showLoading(boolean show);
     void startDetailedView(DetailModel detailModel);
+    Context getContext();
 }

@@ -18,8 +18,4 @@
         android:id="@+id/detail_recycler">
     </android.support.v7.widget.RecyclerView>
 
-
-
-
-
 </LinearLayout>

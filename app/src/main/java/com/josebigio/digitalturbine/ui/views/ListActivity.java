@@ -1,6 +1,7 @@
 package com.josebigio.digitalturbine.ui.views;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -68,5 +69,10 @@ public class ListActivity extends AppCompatActivity implements ListView {
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.EXTRA_DETAILED_PRODUCT,detailModel);
         startActivity(intent);
+    }
+
+    @Override
+    public Context getContext() {
+        return this;
     }
 }
